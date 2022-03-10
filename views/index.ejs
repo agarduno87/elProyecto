@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="/stylesheets/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+  <script src="https://kit.fontawesome.com/d3ab361afb.js" crossorigin="anonymous"></script>
+  <script src="/javascript/navbarOnScroll.js" async></script>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="nav flex">
+      <!-- <img class="nav__logo logo--light" src="/images/logo--light.png" alt="zebra" /> -->
+      <img class="logo" src="/images/logozebrablanco.png" alt="zebra" />
+
+      <i class="fas fa-ellipsis-v nav__menu-icon menu-icon--light"></i>
+    </nav>
+    <div class="hero">
+      <div class="hero__content">
+        <h2 class="hero__title">Fall in love. One day at a time.</h2>
+        <h3 class="hero__subtitle">Porsche Drive - Rental</h3>
+      </div>
+      <div class="hero__icon">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="about">
+      <div>
+        <img class="about__image" src="/images/porsche-driveway.webp" alt="Porsche Drive Way">
+        <p class="about__content">
+          Make your next big date a night to remember with a joyride in an
+          iconic 911, or take a family road trip in style with the Macan.
+        </p>
+        <p class="about__content">
+          Now you can rent the Porsche vehicle of your choice by the day with
+          no long-term commitment, convenient drop-off and secondary insurance
+          fully included.
+        </p>
+        <p class="about__content">
+          No matter the occasion, we’ve got you covered. Your rental may be
+          temporary, but the thrill of the drive will stay with you.
+        </p>
+        <img class="about__logo" src="/images/porsche-driveLogo.png" alt="Porsche Drive">
+      </div>
+    </section>
+    <section class="rent-a-car">
+      <div>
+        <ul class="rent-a-car__list scroll--horizontal list--top">
+          <li class="rent-a-car__item item-first"><a class="rent-a-car__link" href="http://">
+              <h3>911</h3>
+          </li>
+          <li class="rent-a-car__item porsche-nineeleven-one"><a href="http://"></a></li>
+          <li class="rent-a-car__item porsche-nineeleven-one"><a href="http://"></a></li>
+          <li class="rent-a-car__item porsche-nineeleven-one"><a href="http://"></a></li>
+          <li class="rent-a-car__item porsche-nineeleven-one"><a href="http://"></a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="rent-a-car__list scroll--horizontal">
+          <li class="rent-a-car__item item-first"><a class="rent-a-car__link" href="http://">
+              <h3>Cayenne</h3>
+            </a></li>
+          <li class="rent-a-car__item porsche-nineeleven-one"><a class="rent-a-car__link" href="http://"></a></li>
+          <li class="rent-a-car__item porsche-nineeleven-one"><a class="rent-a-car__link" href="http://"></a></li>
+          <li class="rent-a-car__item porsche-nineeleven-one"><a class="rent-a-car__link" href="http://"></a></li>
+          <li class="rent-a-car__item porsche-nineeleven-one"><a class="rent-a-car__link" href="http://"></a></li>
+        </ul>
+      </div>
+    </section>
+    <section>available cars</section>
+    <section>How to drive a car</section>
+    <section>Know before you drive</section>
+    <section>locations</section>
+  </main>
+  <footer>
+    <%- include('partials/footer.ejs') %>
+  </footer>
+</body>
+
+</html>

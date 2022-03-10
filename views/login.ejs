@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <title>Log in</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <%- include('partials/header.ejs') %>
+    </header>
+
+    <main class="formulario">
+        <form action="/register" method="POST">
+
+
+            <section class="menu">
+                <h2>Ingresa</h2>
+                <div class='clase1'>
+                    <!-- <label for="nombre">Nombre de usuario: </label> -->
+                    <input class='casilla' type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                </div>
+
+                <div class='clase1'>
+                    <!-- <label for="nombre">Contraseña: </label> -->
+                    <input class='casilla' type="password" name="nombre" id="nombre"
+                        placeholder="Ingrese su contraseña">
+                </div>
+
+                <a class="contra" href="/reestabletucontrasena">¿Olvidaste tu contraseña?</a>
+
+                <a class="contra1" href="/reestabletucontrasena">¿Aún no tienes una cuenta?</a>
+
+
+                <button class="boton" type="submit"><a href="/">Ingresar</a></button>
+                <button class="boton2" type="submit"><a href="/">Ingresar como invitado</a></button>
+
+        </form>
+
+    </main>
+    <footer>
+        <%- include('partials/footer.ejs') %>
+
+    </footer>
+</body>
+
+</html>
