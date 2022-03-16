@@ -1,0 +1,26 @@
+{
+    carro1:
+    {
+        marca: "Ford",
+        modelo: "Fiesta",
+        ano: "2015",
+        cor: "Preto",
+        preco: "R$ 12.000,00"
+    },
+    carro2:
+    {
+        marca: "Ford",
+        modelo: "Fiesta",
+        ano: "2015",
+        cor: "Preto",
+        preco: "R$ 12.000,00"
+    },
+    carro3:
+    {
+        marca: "Ford",
+        modelo: "Fiesta",
+        ano: "2015",
+        cor: "Preto",
+        preco: "R$ 12.000,00"
+    },
+}

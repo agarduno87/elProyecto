@@ -35,7 +35,9 @@ const controller = {
   burger: (req, res, next) => {
     res.render('burger');
   }
-
+  create: (req, res, next) => {
+    res.render('create');
+  }
 
 };
 
