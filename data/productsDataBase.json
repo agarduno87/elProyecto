@@ -5,7 +5,7 @@
         "price": 1,
         "category": "911",
         "description": "descripción",
-        "image": "rent-a-car__item porsche-nineeleven-one"
+        "image": "porsche-stepingOut.jpg"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "price": 1,
         "category": "911",
         "description": "descripción",
-        "image": "rent-a-car__item porsche-nineeleven-one"
+        "image": "porsche-stepingOut.jpg"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "price": 1,
         "category": "911",
         "description": "descripción",
-        "image": "rent-a-car__item porsche-nineeleven-one"
+        "image": "porsche-nineeleven-one.png"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "price": 1,
         "category": "911",
         "description": "descripción",
-        "image": "rent-a-car__item porsche-nineeleven-one"
+        "image": "porsche-nineeleven-one.png"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "price": 1,
         "category": "cayenne",
         "description": "descripción",
-        "image": "rent-a-car__item porsche-nineeleven-one"
+        "image": "porsche-nineeleven-one.png"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "price": 1,
         "category": "cayenne",
         "description": "descripción",
-        "image": "rent-a-car__item porsche-nineeleven-one"
+        "image": "porsche-nineeleven-one.png"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "price": 1,
         "category": "cayenne",
         "description": "descripción",
-        "image": "rent-a-car__item porsche-nineeleven-one"
+        "image": "porsche-nineeleven-one.png"
     },
     {
         "id": 8,
@@ -61,6 +61,6 @@
         "price": 1,
         "category": "cayenne",
         "description": "descripción",
-        "image": "rent-a-car__item porsche-nineeleven-one"
+        "image": "porsche-nineeleven-one.png"
     }
 ]

@@ -17,11 +17,36 @@
     <header class="header">
         <%- include('partials/header.ejs') %>
     </header>
-    <main class="formulario">
+    <!-- <main class="formulario"> -->
+    <main>
+
         <%= products %>
-            <h1 class="texto">
-                Página : /productDetails
-            </h1>
+            <% for (const product of products ) { %>
+                <!-- Se utiliza el for of para imprimir todos los autos -->
+
+                <a href="/products/detail/<%= product.id %>">
+                    <img src="/images/products/<%= product.image %>" alt="imagen de producto">
+
+                    <p>
+                        <%= product.name %>
+                    </p>
+
+                    <p>
+                        <%= product.price %>
+                    </p>
+
+                    <p>
+                        <%= product.name %>
+                    </p>
+                </a>
+
+
+                <% } %>
+                    <img src="/images/logozebrablanco.png" alt="">
+                    <h1 class="texto">
+                        Página : /productDetails
+                    </h1>
+
 
     </main>
     <footer>
