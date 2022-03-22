@@ -42,7 +42,22 @@ const controller = {
   },
   burger: (req, res, next) => {
     res.render('burger');
-  }
+  },
+  detail: (req, res) => {
+    // Do the magic
+    const id = req.params.id
+    const product = products.find(p => p.id == id)  //Con esto se encuentra a un producto mediante su id
+
+    // const { discount, price } = product; //se hace un destructuring sino me equivoco
+
+    // const finalPrice = discount / 100 * price; //Hay qu calcular el precio final, se hace la operación matemática correspondiente desde el controlador
+
+
+    // product.finalPrice = finalPrice;
+
+    res.render("detail", { product })
+  },
+
 
 
 };
