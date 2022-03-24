@@ -16,7 +16,9 @@ const controller = {
         const product = products.find(p => p.id == id) //Se hace este paso para que solo nos renderice un producto, el producto del id
         res.render("detail", { product })//se comparte la variable products con la vista detail
     },
-
+    create: (req, res) => {
+        res.render('product-create-form')
+    }
 
 
 };
