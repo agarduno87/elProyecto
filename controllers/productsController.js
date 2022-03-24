@@ -18,6 +18,10 @@ const controller = {
     },
     create: (req, res) => {
         res.render('product-create-form')
+    },
+    store: (req, res) => {
+        const body = req.body //Esto se hace para obtener todos los datos de cada clase que se nos envía desde el formulario
+        res.redirect('/products') //Una vez que se envían los datos se tiene que redireccionar a una dirección con el path completo, en este caso regresamos a la ventana de productos
     }
 
 
