@@ -24,7 +24,7 @@
             <% for (const product of products ) { %>
                 <!-- Se utiliza el for of para imprimir todos los autos -->
 
-                <a href="/detail/<%= product.id %>">
+                <a href="/products/detail/<%= product.id %>">
                     <img src="/images/<%= product.image %>" alt="imagen de producto">
                     <!-- se pone la ruta en donde están las imágenes, ahí el data base va a decir "product1,2,3,...n.image", el cual tiene el nombre del archivo que coincidirá con el que estará en la carpeta images-->
                 </a>

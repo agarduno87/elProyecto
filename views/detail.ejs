@@ -10,81 +10,46 @@
     <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
-    <title>Error</title>
+    <title>Product details</title>
 </head>
 
 <body>
-
     <header class="header">
         <%- include('partials/header.ejs') %>
     </header>
+    <!-- <main class="formulario"> -->
+    <main>
 
-    <div class="container products-wrapper">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="products-title">Detalle del producto: NOMBRE DEL PRODUCTO</h2>
-            </div>
-        </div>
-        <div class="product-detail">
-            <div class="row">
-                <div class="col-12 col-lg-8">
-                    <img src="/images/products/<%= product.image %>" alt="product image" class="product-detail-img">
-                    <p class="product-detail-description">
-                        <%= product.description %>
-                            <!-- se agarra el description de la base de datos y de ahí con todos igual -->
+        <%= product %>
 
-                    </p>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <article class="product-detail-info">
-                        <h2 class="product-detail-title">
-                            <%= product.name %>
-                        </h2>
+            <!-- Se utiliza el for of para imprimir todos los autos -->
 
-                        <p class="product-detail-price small">
-                            <span>$<%= product.price %></span>
-                            /
-                            <b>
-                                <%= product.discount %>% OFF
-                            </b>
-                        </p>
-                        <p class="product-detail-price">
-                            $<%= product.finalPrice %>
-                        </p>
-                        <p class="product-detail-price">
-                            $<%= product.price %>
-                        </p>
+            <!-- <a href="/products/detail/<%= product.id %>"> -->
+            <img src="/images/<%= product.image %>" alt="imagen de producto">
+            <!-- se pone la ruta en donde están las imágenes, ahí el data base va a decir "product1,2,3,...n.image", el cual tiene el nombre del archivo que coincidirá con el que estará en la carpeta images-->
+            </a>
 
-                        <ul class="actions-list">
-                            <li>
-                                <i class="fas fa-credit-card"></i>
-                                <p>Pagá en 12 cuotas sin interes</p>
-                            </li>
-                            <li>
-                                <i class="fas fa-store"></i>
-                                <p>Retiro gratis en locales del vendedor</p>
-                            </li>
-                        </ul>
+            <p>
+                <%= product.name %>
+            </p>
 
-                        <a href="#" class="buy-now-button">COMPRAR AHORA</a>
-                        <hr>
+            <p>
+                <%= product.price %>
+            </p>
 
-                        <a href="/products/edit/<%= product.id %>" class="action-button edit">EDITAR
-                            PRODUCTO</a>
-                        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"
-                            style="display: inline-flex">
-                            <button type="submit" class="action-button delete">ELIMINAR</button>
-                        </form>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
+            <p>
+                <%= product.name %>
+            </p>
 
+            <a href="#">Comprar</a>
+            <a href="/products/edit/<=%product.id%>">Editar producto</a>
+            <form action="/products/delete/<=%product.id%>" method="POST">
+                <button type="submit">Eliminar</button>
+            </form>
 
+    </main>
     <footer>
         <%- include('partials/footer.ejs') %>
     </footer>
-</body>
 
-</html>
+</body>
