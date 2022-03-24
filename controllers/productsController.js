@@ -29,12 +29,15 @@ const controller = {
         }
         //En este punto ya se tiene el objeto creado en el índice último + 1, ahora se tiene que mandar a la base de datos (JSON), mediante el PUSH
         products.push(newProduct)
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
-
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //Esto no supe para qué es??? :c
         res.redirect('/products') //Una vez que se envían los datos se tiene que redireccionar a una dirección con el path completo, en este caso regresamos a la ventana de productos
-    }
+    },
 
+    edit: (req, res) => {
+        const id = req.params.id
+        const product = products.find(p => p.id == id)
+        res.render("product-edit-form", { product })
+    }
 
 };
 
