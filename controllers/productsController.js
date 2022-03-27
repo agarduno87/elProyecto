@@ -20,23 +20,45 @@ const controller = {
         res.render('product-create-form')
     },
     store: (req, res) => {
+        // Do the magic
         const newProduct = {
+            // id: products[products.length - 1].id + 1, //Eso es para obtener el id nuevo del producto y colocárselo, debe ser el último id
+            //el id es base cero, entonces el último id si son 16 elementos sería 15. entonces se agarra el length que es 16, el id sería 15. por eso es length-1.
+            //entonces el último id seria el products.length-1 + 1
+            ...req.body  //elipsis sintaxis, investigar
+            //   image: req.file.filename
 
-            //Al new body le faltan 2 campos de la base de datos, el id y la imagen por lo que vamos a ponerlos:
-            id: products[products.length - 1].id + 1, //el array de la base de datos tiene 8 elementos, nos queremos posicionar en el índice 7(el último del array) por lo tanto si el length es = 8, al restar 1 llegamos a la posición 7 del array que corresponde al último elemento
-            ...req.body //sintaxis spread nos permite tener todos los elementos del objeto body body.name, body.price... sin tener que escribir 1 por 1
-            //Así el new product va a tener todo lo del body
         }
-        //En este punto ya se tiene el objeto creado en el índice último + 1, ahora se tiene que mandar a la base de datos (JSON), mediante el PUSH
-        products.push(newProduct)
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //Esto no supe para qué es??? :c
-        res.redirect('/products') //Una vez que se envían los datos se tiene que redireccionar a una dirección con el path completo, en este caso regresamos a la ventana de productos
+
+        products.push(newProduct) //agrega al arreglo el producto que acabamos de insertar
+
+        // express validator
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '')) //Esto es necesario pero no entendí para qué se usa
+
+
+        res.redirect("/products") //Redirige después de guarda un producto
     },
+
 
     edit: (req, res) => {
         const id = req.params.id
         const product = products.find(p => p.id == id)
         res.render("product-edit-form", { product })
+    },
+
+    // update: (req, res) => {
+    //     const id = req.params.id
+    //     const product = products.find(p => p.id == id)
+    //     const productToEdit = {
+    //         id,
+    //         ...req.body,
+    //         image:
+    //     }
+    //     const body = req.body
+    // }
+    shoppingCar: (req, res, next) => {
+        res.render('shoppingCar');
     }
 
 };

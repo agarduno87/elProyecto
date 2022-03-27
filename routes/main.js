@@ -7,7 +7,6 @@ router.get('/', mainController.index);
 router.get('/login', mainController.login);
 router.get('/error', mainController.error);
 router.get('/reservation', mainController.reservation);
-router.get('/shoppingCar', mainController.shoppingCar);
 router.get('/signup', mainController.signup);
 router.get('/search', mainController.search);
 router.get('/contact', mainController.contact);

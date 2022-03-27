@@ -7,9 +7,11 @@ router.get('/', productsController.products);
 router.get('/detail/:id?', productsController.detail); //Nos va a cargar únicamente un producto, el del id, en el controlador está toda la lógica.
 router.get('/create', productsController.create) //Muestra el formulario para la creación de los productos
 router.get('/edit/:id?', productsController.edit) //Muestra el formulario para editar productos
+router.get('/shoppingcar', productsController.shoppingCar);
 
 router.post('/', productsController.store) //este es el envío de los datos
 
+// router.put('/edit/:id?', productsController.update) //Muestra el formulario para editar productos
 
 
 
