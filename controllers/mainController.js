@@ -13,6 +13,15 @@ const controller = {
   login: (req, res, next) => {
     res.render('login');
   },
+
+  create: (req, res, next) => {
+    res.render('create');
+  },
+
+  modify: (req, res, next) => {
+    res.render('modify');
+  },
+
   error: (req, res, next) => {
     res.render('error');
   },
