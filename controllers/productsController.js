@@ -26,17 +26,12 @@ const controller = {
             //el id es base cero, entonces el último id si son 16 elementos sería 15. entonces se agarra el length que es 16, el id sería 15. por eso es length-1.
             //entonces el último id seria el products.length-1 + 1
             ...req.body  //elipsis sintaxis, investigar
-            //   image: req.file.filename
-
+            // image: req.file.filename
         }
-
         products.push(newProduct) //agrega al arreglo el producto que acabamos de insertar
 
         // express validator
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '')) //Esto es necesario pero no entendí para qué se usa
-
-
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //Esto es necesario pero no entendí para qué se usa
         res.redirect("/products") //Redirige después de guarda un producto
     },
 
