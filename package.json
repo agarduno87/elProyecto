@@ -14,8 +14,12 @@
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "^2.7.4",
+<<<<<<< HEAD
     "express": "^4.17.3",
     "express-validator": "^6.14.0",
+=======
+    "express": "^4.16.4",
+>>>>>>> 60244eee141f507d870e02347ad2c6a283ebd815
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "multer": "^1.4.4",

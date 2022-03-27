@@ -4,10 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-
-//Ya no necesitamos el users
-// var usersRouter = require('./routes/users');
+var mainRouter = require('./routes/main');
+var productsRouter = require('./routes/products')
 
 var app = express();
 
@@ -21,7 +19,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', mainRouter);
+app.use('/products', productsRouter);
 
 //Ya no necesitamos esta parte
 // app.use('/users', usersRouter);
@@ -42,7 +41,7 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3001, () => {
-  console.log('Servidor funcionando en el puerto 3001')
+app.listen(3000, () => {
+  console.log('Servidor funcionando en el puerto 3000')
 })
 module.exports = app;
