@@ -13,7 +13,7 @@ router.post('/', productsController.store) //este es el envío de los datos
 
 router.put('/edit/:id?', productsController.update) //Muestra el formulario para editar productos
 
-
+router.delete('/delete/:id', productsController.delete)
 
 
 module.exports = router;

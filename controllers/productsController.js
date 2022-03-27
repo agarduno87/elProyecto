@@ -46,19 +46,30 @@ const controller = {
 
     update: (req, res) => {
 
-        const id = req.params.id
-        const idn = products.findIndex(p => p.id == id)
-        products[idn] = {
+        const id = req.params.id //recibimos el id desde el formulario
+        //el findindex nos regresa el índicde el array de un producto, si existe nos regresa su valor, sino un -1
+        const idn = products.findIndex(p => p.id == id) //buscamos el producto mediante el id
+        products[idn] = { //accedemos al producto del índice "n"
             id,
-            ...req.body,
+            ...req.body, //copia todo del body
             image: products[idn].image
         }
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
-        res.redirect("/products/detail/" + id)
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //no se crea una nueva variable sino que se actualiza con la nueva información nueva, todo está en esta línea
+        res.redirect("/products/detail/" + id) //redirigimos a este path
     },
 
     shoppingCar: (req, res, next) => {
         res.render('shoppingCar');
+    },
+
+    delete: (req, res) => {
+        const id = req.params.id //recibimos el id
+        //el findindex nos regresa el índicde el array de un producto, si existe nos regresa su valor, sino un -1
+        const idn = products.findIndex(p => p.id == id) //buscamos el producto mediante el id
+        products.splice(idn, 1) //quita elementos de un array, el primer argumento es el indice donde empezamos a borrar y el segundo donde terminamos de borrar, esto supongo borra el elemento idn
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //no se crea una nueva variable sino que se actualiza con la nueva información nueva, todo está en esta línea
+        res.redirect('/products') //redirigimos a este path
     }
 
 };
