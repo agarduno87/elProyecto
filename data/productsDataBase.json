@@ -1,10 +1,9 @@
 [
  {
-  "id": 1,
-  "name": "Auto 1",
-  "price": 1,
-  "category": "911",
-  "description": "descripción",
+  "id": "1",
+  "name": "Auto prueba edit_2",
+  "price": "1000",
+  "description": "prueba",
   "image": "porsche-stepingOut.jpg"
  },
  {

@@ -22,17 +22,19 @@ const controller = {
     store: (req, res) => {
         // Do the magic
         const newProduct = {
-            // id: products[products.length - 1].id + 1, //Eso es para obtener el id nuevo del producto y colocárselo, debe ser el último id
-            //el id es base cero, entonces el último id si son 16 elementos sería 15. entonces se agarra el length que es 16, el id sería 15. por eso es length-1.
-            //entonces el último id seria el products.length-1 + 1
-            ...req.body  //elipsis sintaxis, investigar
+
+            id: products[products.length - 1].id + 1, //Eso es para obtener el id nuevo del producto y colocárselo, obtenemos el id del ultimo elemento y le sumanos 1
+            //Con el products.length obtenemos un valor de 8, pero no queremos sitiarnos en el lugar 8 sino el 7, ya que el arreglo es de base cero. con el -1 llegamos al valor 7_
+            //que sería el último elemento del arreglo, posteriormente le sumamos 1 y así obtenemos el id del último elemento + 1 que será asignado al nuevo objeto.
+
+            ...req.body  //elipsis sintaxis, investigar, hasta acá solo agregamos lo que falta que es el id y la imagen, ya que el body tiene nada mas 4 o 5 elementos
             // image: req.file.filename
         }
         products.push(newProduct) //agrega al arreglo el producto que acabamos de insertar
 
-        // express validator
+        //     // express validator
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //Esto es necesario pero no entendí para qué se usa
-        res.redirect("/products") //Redirige después de guarda un producto
+        res.redirect("/products") //Redirige después de guarda un producto, se tiene que poner el path "completo"
     },
 
 
@@ -42,16 +44,19 @@ const controller = {
         res.render("product-edit-form", { product })
     },
 
-    // update: (req, res) => {
-    //     const id = req.params.id
-    //     const product = products.find(p => p.id == id)
-    //     const productToEdit = {
-    //         id,
-    //         ...req.body,
-    //         image:
-    //     }
-    //     const body = req.body
-    // }
+    update: (req, res) => {
+
+        const id = req.params.id
+        const idn = products.findIndex(p => p.id == id)
+        products[idn] = {
+            id,
+            ...req.body,
+            image: products[idn].image
+        }
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
+        res.redirect("/products/detail/" + id)
+    },
+
     shoppingCar: (req, res, next) => {
         res.render('shoppingCar');
     }
