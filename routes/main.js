@@ -6,6 +6,7 @@ const mainController = require('../controllers/mainController');
 router.get('/', mainController.index);
 router.get('/login', mainController.login);
 router.get('/create', mainController.create);
+
 router.get('/modify', mainController.modify);
 router.get('/error', mainController.error);
 router.get('/reservation', mainController.reservation);
