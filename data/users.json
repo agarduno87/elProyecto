@@ -1,0 +1,35 @@
+{
+    user1:
+    {
+        Nombre: "Antonio",
+        Apellido: "Garduño",
+        Correo: "ing.antoniogz@gmail.com",
+        Contaseña: "123456789",
+        Confirm: "123456789"
+    },
+    user2:
+    {
+        Nombre: "Julio",
+        Apellido: "Añoveros",
+        Correo: "xxxrrrttt@gmail.com",
+        Contaseña: "987654321",
+        Confirm: "987654321"
+    },
+    user3:
+    {
+        Nombre: "Alejandro",
+        Apellido: "Garcia",
+        Correo: "magarciaa92@gmail.com",
+        Contaseña: "456987123",
+        Confirm: "456987123"
+    },
+    user4:
+    {
+        Nombre: "Carlos",
+        Apellido: "xxxxxxx",
+        Correo: "yyhuujjik@gmail.com",
+        Contaseña: "159951753",
+        Confirm: "159951753"
+    },
+
+}
