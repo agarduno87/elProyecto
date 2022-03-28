@@ -1,25 +1,15 @@
 [
  {
-  "id": 3,
-  "name": "Auto 3",
-  "price": 1,
-  "category": "911",
+  "id": "3",
+  "name": "Auto 3 editado",
+  "price": "1",
   "description": "descripción",
   "image": "porsche-nineeleven-one.png"
  },
  {
-  "id": 4,
-  "name": "Auto 4",
-  "price": 1,
-  "category": "911",
-  "description": "descripción",
-  "image": "porsche-nineeleven-one.png"
- },
- {
-  "id": 5,
-  "name": "Auto 5",
-  "price": 1,
-  "category": "cayenne",
+  "id": "4",
+  "name": "Auto 4_editado",
+  "price": "1",
   "description": "descripción",
   "image": "porsche-nineeleven-one.png"
  },
@@ -49,5 +39,8 @@
  },
  {},
  {},
- {}
+ {},
+ {
+  "id": null
+ }
 ]
