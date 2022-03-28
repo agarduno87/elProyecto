@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
@@ -19,13 +20,41 @@
     </header>
     <main class="formulario">
 
-        <h1 class="texto">
-            Página : /search
-        </h1>
-
+        <h2>           
+            <form action="getform.php" method="get">
+                <p>Ingresa tus datos para registrarte y recibir mágicas promociones</p>
+                <label>Ingresa tu nombre: <input type="text"></label><br>
+                <label>Ingresa tu apellido: <input type="text"></label><br>
+                <label>Escribe el E-mail con el que te registras: <input type="email"></label><br>
+                <label>Escribe tu contraseña: <input type="password"></label><br>
+                <label>Confirma tu contraseña: <input type="password_confirmation"></label><br>
+                <input type="submit" value="Submit">
+            </form>
+        </h2>
     </main>
     <footer>
         <%- include('partials/footer.ejs') %>
     </footer>
 
 </body>
+
+
+
+
+        <!-- Este es otro formulario distinto 
+            <h1 class="hero__title">Fall in love. One day at a time.</h1>
+            <form><p>
+                Ingresa tus datos para registrarte y recibir mágicas promociones</p>
+            </form> -->
+        <!-- <form action="/signup" method="POST">
+            <div class="formulario__inputs">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="text" name="lastname" placeholder="Lastname" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="password_confirmation" placeholder="Confirm password" required>
+            </div>
+            <div class="formulario__boton">
+                <button type="submit">Sign up</button>
+            </div>
+        </form> -->

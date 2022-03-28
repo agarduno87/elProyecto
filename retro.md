@@ -39,10 +39,12 @@ Antonio Garduño
 Carlos Aguilar
 
 - GitHub [@cartuga](https://github.com/cartuga )
-- LinkedIn [@cartuga](https://www.linkedin.com/in/o/)
+- LinkedIn [@cartuga](https://www.linkedin.com/in/cartuga/)
 
 ## Log Information
 
+Dependencias
+Arquitectura
 Cambios de versión
 Creación de Vistas
 Edición de Vistas
