@@ -108,6 +108,22 @@ Julio Añoveros
 - GitHub [@jubaan](https://github.com/jubaan)
 - LinkedIn [@jubaan](https://www.linkedin.com/in/jubaan)
 
+Alejandro  
+
+- GitHub [@AlexDDks](https://github.com/AlexDDks)
+- LinkedIn [@AlexDDks](https://www.linkedin.com/in/y)
+
+Antonio Garduño
+
+- GitHub [@agarduno87](https://github.com/agarduno87)
+- LinkedIn [@antonio-garduno](https://www.linkedin.com/in/antonio-garduno/)
+
+
+Carlos Aguilar
+
+- GitHub [@cartuga](https://github.com/cartuga )
+- LinkedIn [@cartuga](https://www.linkedin.com/in/o/)
+
 ## Acknowledgements
 
 - Special thanks to:
