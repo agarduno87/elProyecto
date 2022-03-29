@@ -10,6 +10,10 @@ const controller = {
   index: (req, res, next) => {
     res.render('index', { title: 'Zebra' });
   },
+  CRUD: (req, res, next) => {
+    res.render('CRUD');
+  },
+  
   login: (req, res, next) => {
     res.render('login');
   },

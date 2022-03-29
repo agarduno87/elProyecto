@@ -43,7 +43,10 @@ const controller = {
   },
   burger: (req, res, next) => {
     res.render('burger');
-  }
+  },
+  CRUD: (req, res, next) => {
+    res.render('CRUD');
+  },
 };
 
 module.exports = controller;

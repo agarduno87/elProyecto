@@ -1,7 +1,7 @@
 // guardar el usuario en la db
 const fs = require('fs');
 const User = {
-    fileName: './data/user.json',
+    fileName: './data/users.json',
     getData: function () {
         return fs.readFileSync(this.fileName, 'utf-8');
     },
@@ -45,7 +45,24 @@ const User = {
             return user.id === userData.id;
         });
         return user;
-    }
-}
+    },
+
+    CRUD: function (userData) {
+        if (userData.id) { 
+            return this.update(userData),
+        } else {
+            return this.create(userData), 
+        } else {
+            return this.delete(userData),
+        } else {
+           return this.read(userData), 
+        } else {
+            return this.CRUD(userData),
+        },
+    },
+};
+
+module.exports = User;
+
 
 console.log(User.getData());
