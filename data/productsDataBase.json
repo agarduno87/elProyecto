@@ -1,46 +1,40 @@
 [
- {
-  "id": "3",
-  "name": "Auto 3 editado",
-  "price": "1",
-  "description": "descripción",
-  "image": "porsche-nineeleven-one.png"
- },
- {
-  "id": "4",
-  "name": "Auto 4_editado",
-  "price": "1",
-  "description": "descripción",
-  "image": "porsche-nineeleven-one.png"
- },
- {
-  "id": 6,
-  "name": "Auto 6",
-  "price": 1,
-  "category": "cayenne",
-  "description": "descripción",
-  "image": "porsche-nineeleven-one.png"
- },
- {
-  "id": 7,
-  "name": "Auto 7",
-  "price": 1,
-  "category": "cayenne",
-  "description": "descripción",
-  "image": "porsche-nineeleven-one.png"
- },
- {
-  "id": 8,
-  "name": "Auto 8",
-  "price": 1,
-  "category": "cayenne",
-  "description": "descripción",
-  "image": "porsche-nineeleven-one.png"
- },
- {},
- {},
- {},
- {
-  "id": null
- }
+    {
+        "id": "3",
+        "name": "Auto 3 editado",
+        "price": "1",
+        "description": "descripción",
+        "image": "porsche-nineeleven-one.png"
+    },
+    {
+        "id": "4",
+        "name": "Auto 4_editado",
+        "price": "1",
+        "description": "descripción",
+        "image": "porsche-nineeleven-one.png"
+    },
+    {
+        "id": 6,
+        "name": "Auto 6",
+        "price": 1,
+        "category": "cayenne",
+        "description": "descripción",
+        "image": "porsche-nineeleven-one.png"
+    },
+    {
+        "id": 7,
+        "name": "Auto 7",
+        "price": 1,
+        "category": "cayenne",
+        "description": "descripción",
+        "image": "porsche-nineeleven-one.png"
+    },
+    {
+        "id": 8,
+        "name": "Auto 8",
+        "price": 1,
+        "category": "cayenne",
+        "description": "descripción",
+        "image": "porsche-nineeleven-one.png"
+    }
 ]
