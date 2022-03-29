@@ -50,16 +50,17 @@ const User = {
     CRUD: function (userData) {
         if (userData.id) { 
             return this.update(userData),
-        } else {
+        }, 
+        else {
             return this.create(userData), 
-        } else {
+        }, else {
             return this.delete(userData),
-        } else {
+        }, else {
            return this.read(userData), 
-        } else {
+        }, else {
             return this.CRUD(userData),
         },
-    },
+    }
 };
 
 module.exports = User;
