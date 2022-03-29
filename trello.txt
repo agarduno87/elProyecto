@@ -1,5 +1,20 @@
 Que nos falta???
 
+SPRINT 1: OK
+SPRINT 2: OK
+SPRINT 3: OK
+SPRINT 4: OK
+
+Enchular home (index.js)
+Unificar vistas
+Poner header en todas las páginas
+Logo debe enviar a home
+logo zebra pegado con el header
+poner fotos en reservation
+poner fotos en productDetails
+poner fotos en shoppingCar
+
+
 SPRINT 5:
 
 Registro de usuarios(formulario funcional/estructura de archivos y directorio) - toño

@@ -74,3 +74,41 @@ To Deployment (main)
 
 https://github.com/AlexDDks/proyectoIntegrador
 
+
+- HISTORIAL DE CAMBIOS
+
+Que nos falta???
+
+SPRINT 1: OK
+SPRINT 2: OK
+SPRINT 3: OK
+SPRINT 4: OK
+
+Enchular home (index.js)
+Unificar vistas
+Poner header en todas las páginas
+Logo debe enviar a home
+logo zebra pegado con el header
+poner fotos en reservation
+poner fotos en productDetails
+poner fotos en shoppingCar
+
+
+SPRINT 5:
+
+Registro de usuarios(formulario funcional/estructura de archivos y directorio) - toño
+
+*** Falta hacer que el boton de submit haga el envio de datos al a BD y los guarde ***
+*** Esto es para el archivo de signup y el registro de ususarios ***
+
+Middlewares - Alex
+Header inicio - Alex
+Enchulada de todo - Carlos
+Poner al pedo rama pruebas - Alex
+Sequelize 
+Base de datos (Ya se hizo una pequeña base de datos, ahora falta hacer que el formulario guarde su data)
+
+
+Hay que terminar todas las actividades para comenzar con el Sprint #7
+
+
