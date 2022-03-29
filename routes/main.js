@@ -21,7 +21,7 @@ router.get('/create', mainController.create);
 router.get('/CRUD', mainController.CRUD);
 router.get('/productDetails', mainController.productDetails);
 router.get('/detail', mainController.detail);
-routuer.get('/product-edit', mainController.productEdit);
+router.get('/product-edit', mainController.productEdit);
 router.get('/product-create', mainController.productCreate);
 router.get('/product-update', mainController.productUpdate);
 router.get('/product-delete', mainController.productDelete);
