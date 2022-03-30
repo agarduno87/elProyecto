@@ -24,10 +24,11 @@ app.use(methodOverride('_method'));
 
 var mainRouter = require('./routes/main');
 var productsRouter = require('./routes/products')
-
+var usersRouter = require('./routes/users')
 
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
+app.use('/users', usersRouter)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => next(createError(404)));

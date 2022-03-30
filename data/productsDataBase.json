@@ -1,19 +1,5 @@
 [
  {
-  "id": "3",
-  "name": "Auto 3 editado",
-  "price": "1",
-  "description": "descripción",
-  "image": "porsche-nineeleven-one.png"
- },
- {
-  "id": "6",
-  "name": "Auto 6_editado",
-  "price": "1",
-  "description": "descripción",
-  "image": "porsche-nineeleven-one.png"
- },
- {
   "id": 7,
   "name": "Auto 7",
   "price": 1,
@@ -22,10 +8,9 @@
   "image": "porsche-nineeleven-one.png"
  },
  {
-  "id": 8,
-  "name": "Auto 8",
-  "price": 1,
-  "category": "cayenne",
+  "id": "8",
+  "name": "Auto 8:j",
+  "price": "1",
   "description": "descripción",
   "image": "porsche-nineeleven-one.png"
  }

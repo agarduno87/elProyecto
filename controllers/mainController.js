@@ -7,59 +7,24 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
-  index: (req, res, next) => {
+  index: (req, res) => {
     res.render('index', { title: 'Zebra' });
   },
-
-  login: (req, res, next) => {
-    res.render('login');
-  },
-
-  create: (req, res, next) => {
-    res.render('create');
-  },
-
-  modify: (req, res, next) => {
-    res.render('modify');
-  },
-
-  error: (req, res, next) => {
+  error: (req, res) => {
     res.render('error');
   },
-  productDetails: (req, res, next) => {
-    res.render('productDetails', { products }); //se comparte la variable products con la vista
-  },
-  reservation: (req, res, next) => {
-    res.render('reservation');
-  },
-  signup: (req, res, next) => {
-    res.render('signup');
-  },
-  search: (req, res, next) => {
-    res.render('search');
-  },
-  contact: (req, res, next) => {
+  contact: (req, res) => {
     res.render('contact');
   },
-  socialMedia: (req, res, next) => {
+  socialMedia: (req, res) => {
     res.render('socialMedia');
   },
-  extras: (req, res, next) => {
+  extras: (req, res) => {
     res.render('extras');
   },
-  burger: (req, res, next) => {
+  burger: (req, res) => {
     res.render('burger');
-  },
-  detail: (req, res) => {
-
-    const id = req.params.id
-    const product = products.find(p => p.id == id)
-
-    res.render("detail", { product })
-  },
-
-
-
+  }
 };
 
 module.exports = controller;
