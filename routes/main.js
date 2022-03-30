@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const mainController = require('../controllers/mainController');
+const multer = require('multer')
 
 
 
@@ -11,7 +12,6 @@ router.get('/create', mainController.create);
 router.get('/modify', mainController.modify);
 router.get('/error', mainController.error);
 router.get('/reservation', mainController.reservation);
-router.get('/shoppingCar', mainController.shoppingCar);
 router.get('/signup', mainController.signup);
 router.get('/search', mainController.search);
 router.get('/contact', mainController.contact);

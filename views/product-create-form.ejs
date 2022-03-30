@@ -26,6 +26,7 @@
         </div>
         <div class="col-12">
             <form action="/products" method="post" enctype="multipart/form-data">
+                <!-- el multiform es indispensable para que el formulario pueda enviar archivos -->
                 <div class="row product-detail">
                     <div class="col-12 col-md-6">
                         <label for="name" class="form-label">Nombre del producto:</label>
@@ -33,19 +34,11 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <label for="price" class="form-label">Precio del producto:</label>
-                        <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
+                        <input type="number" id="price" name="price" placeholder="Ej: 5678" class="form-input">
                     </div>
                     <div class="col-12 col-md-6">
                         <label for="discount" class="form-label">Descuento:</label>
-                        <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="category" class="form-label">Categoría:</label>
-                        <select name="category" id="category" class="form-input">
-                            <option value="">Elegí</option>
-                            <option value="in-sale">En oferta</option>
-                            <option value="visited">Últimos agregados</option>
-                        </select>
+                        <input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
                     </div>
                     <div class="col-12">
                         <label for="description" class="form-label">Descripción:</label>
@@ -53,7 +46,7 @@
                     </div>
                     <!-- <div class="col-12">
                         <label for="image" class="form-label">Imagen</label>
-                        <input type="file" accept=".png,.jpeg" name="image" class="form-control" id="image" required />
+                        <input type="file" accept=".png,.jpg" name="image" class="form-control" id="image" required />
                     </div> -->
                     <div class="col-12">
                         <button type="submit" class="buy-now-button">Guardar producto</button>

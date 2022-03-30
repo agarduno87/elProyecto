@@ -20,6 +20,7 @@ const controller = {
         res.render('product-create-form')
     },
     store: (req, res) => {
+        // Do the magic
         const newProduct = {
 
             //Al new body le faltan 2 campos de la base de datos, el id y la imagen por lo que vamos a ponerlos:
@@ -28,16 +29,46 @@ const controller = {
             ...req.body //sintaxis spread nos permite tener todos los elementos del objeto body body.name, body.price... sin tener que escribir 1 por 1
             //Así el new product va a tener todo lo del body
         }
-        //En este punto ya se tiene el objeto creado en el índice último + 1, ahora se tiene que mandar a la base de datos (JSON), mediante el PUSH
-        products.push(newProduct)
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //Esto no supe para qué es??? :c
-        res.redirect('/products') //Una vez que se envían los datos se tiene que redireccionar a una dirección con el path completo, en este caso regresamos a la ventana de productos
+        products.push(newProduct) //agrega al arreglo el producto que acabamos de insertar
+
+        //     // express validator
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //Esto es necesario pero no entendí para qué se usa
+        res.redirect("/products") //Redirige después de guarda un producto, se tiene que poner el path "completo"
     },
+
 
     edit: (req, res) => {
         const id = req.params.id
         const product = products.find(p => p.id == id)
         res.render("product-edit-form", { product })
+    },
+
+    update: (req, res) => {
+
+        const id = req.params.id //recibimos el id desde el formulario
+        //el findindex nos regresa el índicde el array de un producto, si existe nos regresa su valor, sino un -1
+        const idn = products.findIndex(p => p.id == id) //buscamos el producto mediante el id
+        products[idn] = { //accedemos al producto del índice "n"
+            id,
+            ...req.body, //copia todo del body
+            image: products[idn].image
+        }
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //no se crea una nueva variable sino que se actualiza con la nueva información nueva, todo está en esta línea
+        res.redirect("/products/detail/" + id) //redirigimos a este path
+    },
+
+    shoppingCar: (req, res, next) => {
+        res.render('shoppingCar');
+    },
+
+    delete: (req, res) => {
+        const id = req.params.id //recibimos el id
+        //el findindex nos regresa el índicde el array de un producto, si existe nos regresa su valor, sino un -1
+        const idn = products.findIndex(p => p.id == id) //buscamos el producto mediante el id
+        products.splice(idn, 1) //quita elementos de un array, el primer argumento es el indice donde empezamos a borrar y el segundo donde terminamos de borrar, esto supongo borra el elemento idn
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //no se crea una nueva variable sino que se actualiza con la nueva información nueva, todo está en esta línea
+        res.redirect('/products') //redirigimos a este path
     }
 
 };

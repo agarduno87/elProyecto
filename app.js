@@ -7,11 +7,12 @@ var multer = require('multer')
 
 var mainRouter = require('./routes/main');
 var productsRouter = require('./routes/products')
+var methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views')); // Define la ubicación de la carpeta de las Vistas
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -19,14 +20,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
+
+var mainRouter = require('./routes/main');
+var productsRouter = require('./routes/products')
+
 
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
-});
+app.use((req, res, next) => next(createError(404)));
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -42,4 +46,5 @@ app.use(function (err, req, res, next) {
 app.listen(3000, () => {
   console.log('Servidor funcionando en el puerto 3000')
 })
+
 module.exports = app;

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const productsController = require('../controllers/productsController');
-
+const multer = require('multer')
 
 router.get('/', productsController.products);
 router.get('/detail/:id?', productsController.detail); //Nos va a cargar únicamente un producto, el del id, en el controlador está toda la lógica.
@@ -18,11 +18,13 @@ router.get('/edit/:id?', productsController.edit) //Muestra el formulario para e
 // router.get('/product-read', mainController.productRead);
 // router.get('/product-CRUD', mainController.productCRUD);
 // router.get('/products', mainController.products);
+router.get('/shoppingcar', productsController.shoppingCar);
 
 router.post('/', productsController.store) //este es el envío de los datos
 
+router.put('/edit/:id?', productsController.update) //Muestra el formulario para editar productos
 
-
+router.delete('/delete/:id', productsController.delete)
 
 
 module.exports = router;
