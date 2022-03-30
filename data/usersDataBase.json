@@ -1,0 +1,31 @@
+[
+ {
+  "Nombre": "Antonio",
+  "Apellido": "Garduño",
+  "Correo": "ing.antoniogz@gmail.com",
+  "Contasena": "123456789",
+  "Confirm": "123456789"
+ },
+ {
+  "Nombre": "Julio",
+  "Apellido": "Añoveros",
+  "Correo": "xxxrrrttt@gmail.com",
+  "Contasena": "987654321",
+  "Confirm": "987654321"
+ },
+ {
+  "Nombre": "Alejandro",
+  "Apellido": "Garcia",
+  "Correo": "magarciaa92@gmail.com",
+  "Contasena": "456987123",
+  "Confirm": "456987123"
+ },
+ {
+  "Nombre": "Carlos",
+  "Apellido": "xxxxxxx",
+  "Correo": "yyhuujjik@gmail.com",
+  "Contasena": "159951753",
+  "Confirm": "159951753"
+ },
+ {}
+]
