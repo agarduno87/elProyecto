@@ -7,7 +7,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
-    products: (req, res, next) => {
+
+    search: (req, res) => {
+        res.render('search');
+    },
+
+    products: (req, res) => {
         res.render('products', { products }); //se comparte la variable products con la vista products
 
     },
@@ -19,6 +24,7 @@ const controller = {
     create: (req, res) => {
         res.render('product-create-form')
     },
+
     store: (req, res) => {
         // Do the magic
         const newProduct = {
@@ -35,10 +41,6 @@ const controller = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' ')) //Esto es necesario pero no entendí para qué se usa
         res.redirect("/products") //Redirige después de guarda un producto, se tiene que poner el path "completo"
     },
-
-    // aqui van las conexiones de la base de datos
-
-    
 
     edit: (req, res) => {
         const id = req.params.id
@@ -77,3 +79,4 @@ const controller = {
 };
 
 module.exports = controller;
+
