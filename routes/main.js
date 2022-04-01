@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 const mainController = require('../controllers/mainController');
-const multer = require('multer')
-
-
+const multer = require('multer');
+const app = require('../app');
+const upload = multer({ dest: 'uploads/' })
 
 
 router.get('/', mainController.index);

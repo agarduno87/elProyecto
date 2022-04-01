@@ -36,6 +36,9 @@ const controller = {
         res.redirect("/products") //Redirige después de guarda un producto, se tiene que poner el path "completo"
     },
 
+    // aqui van las conexiones de la base de datos
+
+    
 
     edit: (req, res) => {
         const id = req.params.id
